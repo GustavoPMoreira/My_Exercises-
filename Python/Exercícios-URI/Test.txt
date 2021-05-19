@@ -1,0 +1,86 @@
+import time
+start = time.time()
+
+#escreva o cód aqui para calcular 
+o tempo de execução
+
+done = time.time()
+elapsed = done - start
+print(elapsed)
+--------------------------------------------------------------------------
+class Stack(object):
+    def __init__(self):
+        self.Dados=[]
+    def insert(self,value):
+        self.Dados.append(int (value))
+    def out(self):
+        if not self.is_empty():
+            return self.Dados.pop()
+    def is_empty(self):
+        return len(self.Dados)==0
+A=[1,2,3,4,5]
+A=[1,2,3,4,5]
+class Queue(object):
+    def __init__(self):
+        self.Dados=[]
+    def insert(self,value):
+        self.Dados.append(int(value))
+    def out(self):
+        if not self.is_empty():
+            return self.Dados.pop(0)
+    def is_empty(self):
+        return len(self.Dados)==0
+-------------------------------------------------------------------------
+class Stack(object):
+    def __init__(self):
+        self.Dados=[]
+        self.top=0
+    def insert(self,value):
+        self.Dados.append(int (value))
+        self.top+=1
+    def out(self):
+        if self.top==0:
+            return 0
+        else:
+            self.Dados.pop()
+
+class Queue(object):
+    def __init__(self):
+        self.Dados=[]
+    def insert(self,value):
+        self.Dados.append(int(value))
+    def out(self):
+        if not self.is_empty():
+            return self.Dados.pop(0)
+    def is_empty(self):
+        return len(self.Dados)==0
+
+
+#main
+if __name__ == "__main__":
+    tad_stack = Stack()
+    while True:
+        try:
+            l_loop = int(input())
+            # entrada dos dados
+            for a_count in range(l_loop): 
+                l_op, l_number = input().split()
+
+                # teste as tads
+                if int(l_op)==1:
+                    tad_stack.insert(l_number)
+                else:
+                    print(tad_stack.out())
+            #if tad_stack.front:
+            #    print("stack")
+        except:
+            break
+
+symbols = {'^': 6, '*': 5, '/': 5, '+': 4, '-': 4, '>': 3, '<': 3, '=': 3, '#': 3, '.': 2,
+           '|': 1, 'a': 1, 'b': 1, 'c': 1, 'd': 1, 'e': 1, 'f': 1, 'g': 1, 'h': 1, 'i': 1,
+           'j': 1, 'k': 1, 'l': 1, 'm': 1, 'm': 1, 'n': 1, 'o': 1, 'p': 1, 'q': 1, 'r': 1,
+           's': 1, 't': 1, 'u': 1, 'v': 1, 'w': 1, 'x': 1, 'y': 1, 'z': 1, 'A': 1, 'B': 1,
+           'C': 1, 'D': 1, 'E': 1, 'F': 1, 'G': 1, 'H': 1, 'I': 1, 'J': 1, 'K': 1, 'L': 1,
+           'M': 1, 'N': 1, 'O': 1, 'P': 1, 'Q': 1, 'R': 1, 'S': 1, 'T': 1, 'U': 1, 'V': 1,
+           'W': 1, 'X': 1, 'Y': 1, 'Z': 1, '0': 1, '1': 1, '2': 1, '3': 1, '4': 1, '5': 1,
+           '6': 1, '7': 1, '8': 1, '9': 1,}
