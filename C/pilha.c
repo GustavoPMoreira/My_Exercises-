@@ -59,9 +59,10 @@ void display(stack *pointer)
 int main()
 {
     start_stack(&my_stack);
+    pop(&my_stack);
     push(&my_stack,5);
     push(&my_stack,10);
-    push(&my_stack,15);
+   //push(&my_stack,15);
     int value=pop(&my_stack);
     printf("Value popped: %d \n", value);
     display(&my_stack);
